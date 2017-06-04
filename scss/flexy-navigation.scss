@@ -1,0 +1,229 @@
+// |--------------------------------------------------------------------------
+// | Flexy navigation
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .flexy-navigation
+// |
+// | - .flexy-navigation__item
+// | - .flexy-navigation__item--active
+// | - .flexy-navigation__item--dropdown
+// |
+// | - .flexy-navigation__item__dropdown-menu
+// | - .flexy-navigation__item__dropdown-menu__item
+// | - .flexy-navigation__item__dropdown-menu__item--active
+// | - .flexy-navigation__item__dropdown-menu__item--dropdown
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@import "variables";
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@import "mixins";
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.flexy-navigation {
+  display: flex;
+
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.flexy-navigation__item {
+
+  > a {
+    display: block;
+    padding: 0 $flexy-navigation-spacing-left-right;
+
+    font-family: $flexy-navigation-item-link-font-family;
+    font-size: $flexy-navigation-item-link-font-size;
+    font-weight: $flexy-navigation-item-link-font-weight;
+    line-height: $flexy-navigation-default-height;
+    color: $flexy-navigation-item-link-font-color;
+    background-color: $flexy-navigation-item-link-background-color;
+
+    &, &:hover {
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: $flexy-navigation-item-link-hover-font-color;
+      background-color: $flexy-navigation-item-link-hover-background-color;
+    }
+  }
+}
+.flexy-navigation__item--active {
+
+  > a {
+    color: $flexy-navigation-item-active-link-font-color;
+    background-color: $flexy-navigation-item-active-link-background-color;
+  }
+}
+.flexy-navigation__item--dropdown {
+  position: relative;
+
+  > a {
+
+    &:after {
+      @extend .fa;
+
+      margin-left: 5px;
+
+      color: inherit;
+      content: $fa-var-caret-down;
+    }
+  }
+
+  &:hover {
+
+    > .flexy-navigation__item__dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+.flexy-navigation__item__dropdown-menu {
+  position: absolute;
+  display: none;
+
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  max-width: 240px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  z-index: $flexy-navigation-item-dropdown-menu-zindex;
+
+  background-color: $flexy-navigation-item-dropdown-menu-background-color;
+  text-decoration: none;
+  .box-shadow($flexy-navigation-item-dropdown-menu-box-shadow);
+}
+.flexy-navigation__item__dropdown-menu__item {
+
+  > a {
+    display: block;
+    padding: 8px $flexy-navigation-spacing-left-right;
+
+    font-family: $flexy-navigation-item-dropdown-menu-item-link-font-family;
+    font-size: $flexy-navigation-item-dropdown-menu-item-link-font-size;
+    font-weight: $flexy-navigation-item-dropdown-menu-item-link-font-weight;
+    color: $flexy-navigation-item-dropdown-menu-item-link-font-color;
+    background-color: $flexy-navigation-item-dropdown-menu-item-link-background-color;
+
+    text-decoration: none;
+  }
+
+  &:hover {
+
+    > a {
+      color: $flexy-navigation-item-dropdown-menu-item-hover-link-font-color;
+      background-color: $flexy-navigation-item-dropdown-menu-item-hover-link-background-color;
+    }
+  }
+}
+.flexy-navigation__item__dropdown-menu__item--active {
+
+  &,
+  &:hover {
+
+    > a {
+      color: $flexy-navigation-item-dropdown-menu-item-active-link-font-color;
+      background-color: $flexy-navigation-item-dropdown-menu-item-active-link-background-color;
+    }
+  }
+}
+.flexy-navigation__item__dropdown-menu__item--dropdown {
+  position: relative;
+
+  > a {
+    display: flex;
+    align-items: center;
+
+    &:after {
+      @extend .fa;
+
+      flex-grow: 1;
+      text-align: right;
+
+      color: inherit;
+      content: $fa-var-caret-right;
+    }
+  }
+
+  &:hover {
+
+    > .flexy-navigation__item__dropdown-menu {
+      display: block;
+
+      top: 0;
+      left: 100%;
+    }
+  }
+}
+
+.flexy-navigation__sidebar-toggle {
+  line-height: $flexy-navigation-default-height;
+  padding: 0 $flexy-navigation-spacing-left-right;
+
+  .icon {
+    font-size: $flexy-navigation-sidebar-toggle-font-size;
+    color: $flexy-navigation-sidebar-toggle-font-color;
+    line-height: inherit;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

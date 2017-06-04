@@ -1,0 +1,38 @@
+$flexy-navigation-default-height: inherit;
+
+// Item link
+$flexy-navigation-item-link-font-family: $font-family-base;
+$flexy-navigation-item-link-font-size: $font-size-base;
+$flexy-navigation-item-link-font-weight: $font-weight-bold;
+$flexy-navigation-item-link-font-color: $text-color;
+$flexy-navigation-item-link-background-color: transparent;
+
+$flexy-navigation-item-link-hover-font-color: $flexy-navigation-item-link-font-color;
+$flexy-navigation-item-link-hover-background-color: $flexy-navigation-item-link-font-color;
+
+$flexy-navigation-item-active-link-font-color: $flexy-navigation-item-link-hover-font-color;
+$flexy-navigation-item-active-link-background-color: $flexy-navigation-item-link-hover-font-color;
+
+$flexy-navigation-spacing-left-right: floor( ($grid-gutter-width / 2) );
+
+// Dropdown menu
+$flexy-navigation-item-dropdown-menu-zindex: $zindex-dropdown;
+$flexy-navigation-item-dropdown-menu-background-color: $body-bg;
+$flexy-navigation-item-dropdown-menu-box-shadow: 1px 2px 6px rgba(0, 0, 0, .4);
+
+$flexy-navigation-item-dropdown-menu-item-link-font-family: $font-family-base;
+$flexy-navigation-item-dropdown-menu-item-link-font-size: $font-size-base;
+$flexy-navigation-item-dropdown-menu-item-link-font-weight: $font-weight;
+$flexy-navigation-item-dropdown-menu-item-link-font-color: $text-color;
+$flexy-navigation-item-dropdown-menu-item-link-background-color: transparent;
+
+$flexy-navigation-item-dropdown-menu-item-hover-link-font-color: $text-color;
+$flexy-navigation-item-dropdown-menu-item-hover-link-background-color: $body-bg-secondary;
+
+$flexy-navigation-item-dropdown-menu-item-active-link-font-color: #fff;
+$flexy-navigation-item-dropdown-menu-item-active-link-background-color: $brand-primary;
+
+// Sidebar toggle
+$flexy-navigation-sidebar-toggle-font-size: $font-size-base;
+$flexy-navigation-sidebar-toggle-font-color: $text-color;
+

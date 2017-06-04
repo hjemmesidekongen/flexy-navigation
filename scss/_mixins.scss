@@ -1,0 +1,9 @@
+@mixin flexy-navigation-mixin-height($height) {
+
+  > li {
+
+    > a {
+      line-height: $height;
+    }
+  }
+}
