@@ -114,7 +114,7 @@
 
   background-color: $flexy-navigation-item-dropdown-menu-background-color;
   text-decoration: none;
-  .box-shadow($flexy-navigation-item-dropdown-menu-box-shadow);
+  @include box-shadow($flexy-navigation-item-dropdown-menu-box-shadow);
 }
 .flexy-navigation__item__dropdown-menu__item {
 
@@ -193,6 +193,20 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.flexy-navigation--full-width & {
+  width: 100%;
+  
+  .flexy-navigation__item {
+    flex-grow: 1;
+
+    text-align: center;
+
+    > a {
+      display: initial;
+    }
+  }  
+}
 
 // --------------------------------------------------
 // Responsive
