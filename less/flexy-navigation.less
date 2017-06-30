@@ -4,7 +4,9 @@
 // |
 // | This file contains styles for the following:
 // | - .flexy-navigation
-// |
+// 
+// | - .flexy-navigation__icon-link
+// 
 // | - .flexy-navigation__item
 // | - .flexy-navigation__item--active
 // | - .flexy-navigation__item--dropdown
@@ -54,24 +56,12 @@
     font-size: @flexy-navigation-item-link-font-size;
     font-weight: @flexy-navigation-item-link-font-weight;
     line-height: @flexy-navigation-default-height;
-    color: @flexy-navigation-item-link-font-color;
-    background-color: @flexy-navigation-item-link-background-color;
+    color: ;
+    background-color: ;
 
     &, &:hover {
       text-decoration: none;
     }
-
-    &:hover {
-      color: @flexy-navigation-item-link-hover-font-color;
-      background-color: @flexy-navigation-item-link-hover-background-color;
-    }
-  }
-}
-.flexy-navigation__item--active {
-
-  > a {
-    color: @flexy-navigation-item-active-link-font-color;
-    background-color: @flexy-navigation-item-active-link-background-color;
   }
 }
 .flexy-navigation__item--dropdown {
@@ -179,13 +169,13 @@
   }
 }
 
-.flexy-navigation__sidebar-toggle {
+.flexy-navigation__icon-link {
   line-height: @flexy-navigation-default-height;
   padding: 0 @flexy-navigation-spacing-left-right;
 
   .icon {
-    font-size: @flexy-navigation-sidebar-toggle-font-size;
-    color: @flexy-navigation-sidebar-toggle-font-color;
+    font-size: @flexy-navigation-icon-link-font-size;
+    color: @flexy-navigation-icon-link-font-color;
     line-height: inherit;
   }
 }
@@ -193,6 +183,12 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.flexy-navigation-mixin-item-colors(
+  @flexy-navigation-item-link-font-color, @flexy-navigation-item-link-background-color,
+  @flexy-navigation-item-link-hover-font-color, @flexy-navigation-item-link-hover-background-color,
+  @flexy-navigation-item-active-link-font-color, @flexy-navigation-item-active-link-background-color,
+);
 
 .flexy-navigation--full-width & {
   width: 100%;

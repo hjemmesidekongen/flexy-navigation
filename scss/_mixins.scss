@@ -7,3 +7,30 @@
     }
   }
 }
+
+@mixin flexy-navigation-mixin-item-colors($font-color, $background-color, $hover-font-color, $hover-background-color, $active-font-color, $active-background-color) {
+
+  .flexy-navigation__item {
+
+    > a {
+      color: $font-color;
+      background-color: $background-color;
+
+      &:hover {
+        color: $hover-font-color;
+        background-color: $hover-background-color;
+      }
+    }
+  }
+  .flexy-navigation__item--active,
+  .flexy-navigation__item--active-trail {
+
+    > a {
+
+      &, &:hover {
+        color: $active-font-color;
+        background-color: $active-background-color;
+      }
+    }
+  }
+}
