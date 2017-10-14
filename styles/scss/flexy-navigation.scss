@@ -219,10 +219,10 @@
 // Variants
 // --------------------------------------------------
 
-.flexy-navigation-mixin-item-colors(
+@include flexy-navigation-mixin-item-colors(
   $flexy-navigation-item-link-font-color, $flexy-navigation-item-link-background-color,
   $flexy-navigation-item-link-hover-font-color, $flexy-navigation-item-link-hover-background-color,
-  $flexy-navigation-item-active-link-font-color, $flexy-navigation-item-active-link-background-color,
+  $flexy-navigation-item-active-link-font-color, $flexy-navigation-item-active-link-background-color
 );
 
 .flexy-navigation--full-width & {
