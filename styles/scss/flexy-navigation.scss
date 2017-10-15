@@ -225,7 +225,7 @@
   $flexy-navigation-item-active-link-font-color, $flexy-navigation-item-active-link-background-color
 );
 
-.flexy-navigation--full-width & {
+.flexy-navigation--full-width {
   width: 100%;
   
   .flexy-navigation__item {
@@ -236,7 +236,7 @@
     > a {
       display: initial;
     }
-  }  
+  }
 }
 
 // --------------------------------------------------
