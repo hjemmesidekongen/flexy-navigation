@@ -50,46 +50,49 @@ var flexy_navigation = (function ($) {
      * Add classes to elements, based upon attached classes.
      */
     function upgrade() {
+        var $navigations = $(layout_classes.navigation);
 
         // Navigations
-        $(layout_classes.navigation).each(function(index, element) {
-            var $navigation = $(this),
-                $megamenus = $navigation.find(layout_classes.dropdown_megamenu),
-                $dropdown_megamenu = $navigation.find(layout_classes.dropdown_has_megamenu);
+        if ($navigations.length > 0) {
+            $navigations.each(function(index, element) {
+                var $navigation = $(this),
+                    $megamenus = $navigation.find(layout_classes.dropdown_megamenu),
+                    $dropdown_megamenu = $navigation.find(layout_classes.dropdown_has_megamenu);
 
-            // Has already been upgraded
-            if ($navigation.hasClass(layout_classes.is_upgraded)) {
-                return;
-            }
+                // Has already been upgraded
+                if ($navigation.hasClass(layout_classes.is_upgraded)) {
+                    return;
+                }
 
-            // Has megamenu
-            if ($megamenus.length > 0) {
-                $navigation.addClass(layout_classes.navigation_has_megamenu);
-            }
+                // Has megamenu
+                if ($megamenus.length > 0) {
+                    $navigation.addClass(layout_classes.navigation_has_megamenu);
 
-            // Run through all megamenus
-            $megamenus.each(function(index, element) {
-                var $megamenu = $(this),
-                    has_obfuscator = $('html').hasClass('has-obfuscator') ? true : false;
+                    // Run through all megamenus
+                    $megamenus.each(function(index, element) {
+                        var $megamenu = $(this),
+                            has_obfuscator = $('html').hasClass('has-obfuscator') ? true : false;
 
-                $megamenu.parents(layout_classes.dropdown)
-                    .addClass(layout_classes.dropdown_has_megamenu)
-                    .hover(function() {
+                        $megamenu.parents(layout_classes.dropdown)
+                            .addClass(layout_classes.dropdown_has_megamenu)
+                            .hover(function() {
 
-                        if (has_obfuscator) {
-                            obfuscator.show();
-                        }
-                    }, function() {
-                        
-                        if (has_obfuscator) {
-                            obfuscator.hide();
-                        }
+                                if (has_obfuscator) {
+                                    obfuscator.show();
+                                }
+                            }, function() {
+                                
+                                if (has_obfuscator) {
+                                    obfuscator.hide();
+                                }
+                            });
                     });
-            });
+                }
 
-            // Is upgraded
-            $navigation.addClass(layout_classes.is_upgraded);
-        });
+                // Is upgraded
+                $navigation.addClass(layout_classes.is_upgraded);
+            });
+        }
     }
 
     return pub;
