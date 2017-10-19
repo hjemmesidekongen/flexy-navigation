@@ -200,8 +200,9 @@
 }
 
 .flexy-navigation__icon-link {
+  padding: 0 @flexy-navigation-icon-link-spacing-left-right;
+  
   line-height: @flexy-navigation-default-height;
-  padding: 0 floor( ( @flexy-navigation-spacing-left-right / 2 ) );
 
   a& {
 
@@ -212,8 +213,9 @@
 
   .icon {
     font-size: @flexy-navigation-icon-link-font-size;
-    color: @flexy-navigation-icon-link-font-color;
     line-height: inherit;
+  
+    color: @flexy-navigation-icon-link-font-color;
   }
 }
 
