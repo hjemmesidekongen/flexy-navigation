@@ -1,6 +1,6 @@
 {
   "name": "flexy-navigation",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides a basic HTML navigation.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
