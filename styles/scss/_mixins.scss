@@ -1,10 +1,17 @@
 @mixin flexy-navigation-mixin-height($height) {
 
-  > li {
+  .flexy-navigation {
 
-    > a {
-      line-height: $height;
+    > li {
+
+      > a {
+        line-height: $height;
+      }
     }
+  }
+  
+  .flexy-navigation__icon-link {
+    line-height: $height;
   }
 }
 
