@@ -22,11 +22,12 @@
     > a {
       color: $font-color;
       background-color: $background-color;
+    }
 
-      &:hover {
-        color: $hover-font-color;
-        background-color: $hover-background-color;
-      }
+    &:hover > a,
+    > a:hover {
+      color: $hover-font-color;
+      background-color: $hover-background-color;
     }
   }
   .flexy-navigation__item--active,
