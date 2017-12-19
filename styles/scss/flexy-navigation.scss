@@ -230,7 +230,7 @@
 .flexy-navigation--full-width {
   width: 100%;
   
-  .flexy-navigation__item {
+  > .flexy-navigation__item {
     flex-grow: 1;
 
     text-align: center;
